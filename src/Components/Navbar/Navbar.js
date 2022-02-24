@@ -20,6 +20,7 @@ const Navbar = () => {
         <ul className="navbar-list">
           <li className="header-container"><h2 className="header-logo">Cars</h2></li>
           <NavLink
+            onClick={() => navbarHandler('close-nav')}
             className="selector-container"
             exact
             to="/"
@@ -27,6 +28,7 @@ const Navbar = () => {
             <h2 className="selector">Cars</h2>
           </NavLink>
           <NavLink
+            onClick={() => navbarHandler('close-nav')}
             className="selector-container"
             exact
             to="/Reserve"
@@ -34,6 +36,7 @@ const Navbar = () => {
             <h2 className="selector">Reserve</h2>
           </NavLink>
           <NavLink
+            onClick={() => navbarHandler('close-nav')}
             className="selector-container"
             exact
             to="/MyReservations"
@@ -41,6 +44,7 @@ const Navbar = () => {
             <h2 className="selector">My reservations</h2>
           </NavLink>
           <NavLink
+            onClick={() => navbarHandler('close-nav')}
             className="selector-container"
             exact
             to="/AddCar"
@@ -48,6 +52,7 @@ const Navbar = () => {
             <h2 className="selector">Add cars</h2>
           </NavLink>
           <NavLink
+            onClick={() => navbarHandler('close-nav')}
             className="selector-container"
             exact
             to="/DeleteCar"
