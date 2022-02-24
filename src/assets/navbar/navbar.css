@@ -30,9 +30,17 @@
 }
 
 .selector-container {
+  text-decoration: none;
+  color: black;
   display: flex;
   align-items: center;
   cursor: pointer;
+  margin-bottom: 2px;
+}
+
+.navbar-list > .active {
+  color: white;
+  background-color: #94c414;
 }
 
 .social-container {
