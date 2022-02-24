@@ -22,7 +22,7 @@ const Navbar = () => {
           <NavLink
             onClick={() => navbarHandler('close-nav')}
             className="selector-container"
-            exact
+            exact="true"
             to="/"
           >
             <h2 className="selector">Cars</h2>
@@ -30,7 +30,7 @@ const Navbar = () => {
           <NavLink
             onClick={() => navbarHandler('close-nav')}
             className="selector-container"
-            exact
+            exact="true"
             to="/Reserve"
           >
             <h2 className="selector">Reserve</h2>
@@ -38,7 +38,7 @@ const Navbar = () => {
           <NavLink
             onClick={() => navbarHandler('close-nav')}
             className="selector-container"
-            exact
+            exact="true"
             to="/MyReservations"
           >
             <h2 className="selector">My reservations</h2>
@@ -46,7 +46,7 @@ const Navbar = () => {
           <NavLink
             onClick={() => navbarHandler('close-nav')}
             className="selector-container"
-            exact
+            exact="true"
             to="/AddCar"
           >
             <h2 className="selector">Add cars</h2>
@@ -54,7 +54,7 @@ const Navbar = () => {
           <NavLink
             onClick={() => navbarHandler('close-nav')}
             className="selector-container"
-            exact
+            exact="true"
             to="/DeleteCar"
           >
             <h2 className="selector">Delete cars</h2>
