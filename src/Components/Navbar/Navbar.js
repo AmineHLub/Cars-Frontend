@@ -22,7 +22,7 @@ const Navbar = () => {
           <NavLink
             className="selector-container"
             exact
-            to="/Car"
+            to="/"
           >
             <h2 className="selector">Cars</h2>
           </NavLink>

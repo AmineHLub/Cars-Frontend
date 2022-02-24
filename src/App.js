@@ -13,7 +13,7 @@ function App() {
       <Navbar />
       <main>
         <Routes>
-          <Route path="/Car" element={<Car />} />
+          <Route path="/" element={<Car />} />
           <Route path="/Reserve" element={<Reserve />} />
           <Route path="/MyReservations" element={<MyReservations />} />
           <Route path="/AddCar" element={<AddCar />} />
