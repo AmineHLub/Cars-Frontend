@@ -6,7 +6,7 @@
   bottom: 0;
   left: 0;
   width: 17.5%;
-  background-color: rgba(236, 236, 236, 0.548);
+  background-color: rgb(246 246 246);
 }
 
 .navbar-list {
@@ -21,7 +21,7 @@
 }
 
 .header-logo {
-  transform: rotate(346deg);
+  transform: rotate(350deg);
   font-family: 'Pacifico', cursive;
   font-size: 3.5rem;
   font-weight: 400;
@@ -57,4 +57,64 @@
 .selector-container:hover {
   color: white;
   background-color: #94c414;
+}
+
+.navbar-fixed-container > svg:nth-child(1),
+.burger-menu-nav {
+  display: none;
+}
+
+@media only screen and
+  (min-width: 768px)
+  and (max-width: 1054px) {
+  .navbar-fixed-container {
+    width: 25%;
+  }
+}
+
+@media only screen and
+  (max-width: 768px) {
+  .burger-menu-nav {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 60px;
+  }
+
+  .burger-menu-nav > svg:nth-child(1) {
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    margin-left: 2%;
+  }
+
+  .navbar-fixed-container {
+    width: 70%;
+    left: -70%;
+    z-index: 9;
+  }
+
+  .show-nav {
+    transform: translate(100%);
+    transition: 0.45s;
+  }
+
+  .close-nav {
+    transform: translate(-100%);
+    transition: 0.45s;
+  }
+
+  .navbar-fixed-container > svg:nth-child(1) {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    top: 45px;
+    right: 10px;
+    z-index: 10;
+    height: 40px;
+    width: 40px;
+  }
 }
