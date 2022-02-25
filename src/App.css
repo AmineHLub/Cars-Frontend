@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .d-flex {
   display: flex;
 }
@@ -14,7 +18,7 @@ main {
   left: 17.5%;
   right: 0;
   bottom: 0;
-  background-color: red;
+  background-color: white;
 }
 
 @media only screen and
