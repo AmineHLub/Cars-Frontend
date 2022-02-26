@@ -5,7 +5,7 @@
   top: 0;
   bottom: 0;
   left: 0;
-  width: 17.5%;
+  width: 18.5%;
   background-color: rgb(246 246 246);
 }
 
@@ -16,8 +16,6 @@
   list-style-type: none;
   flex-direction: column;
   height: 100%;
-  margin: 0 0 0 10%;
-  padding: 0;
 }
 
 .header-logo {
@@ -46,7 +44,6 @@
 .social-container {
   place-self: end start;
   width: 100%;
-  margin: 0 0 0 -10%;
 }
 
 .social-main-container {

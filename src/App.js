@@ -12,7 +12,7 @@ function App() {
   return (
     <Router>
       <Navbar />
-      <main>
+      <main className="ml-3">
         <Routes>
           <Route path="/" element={<Car />} />
           <Route path="/Reserve" element={<Reserve />} />

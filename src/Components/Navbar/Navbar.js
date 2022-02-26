@@ -17,56 +17,62 @@ const Navbar = () => {
       </nav>
       <nav className={`navbar-fixed-container ${navState}`}>
         <IoCloseCircle onClick={() => navbarHandler('close-nav')} />
-        <ul className="navbar-list">
-          <li className="header-container"><h2 className="header-logo">Cars</h2></li>
-          <NavLink
-            onClick={() => navbarHandler('close-nav')}
-            className="selector-container"
-            exact="true"
-            to="/"
-          >
-            <h2 className="selector">Cars</h2>
-          </NavLink>
-          <NavLink
-            onClick={() => navbarHandler('close-nav')}
-            className="selector-container"
-            exact="true"
-            to="/Reserve"
-          >
-            <h2 className="selector">Reserve</h2>
-          </NavLink>
-          <NavLink
-            onClick={() => navbarHandler('close-nav')}
-            className="selector-container"
-            exact="true"
-            to="/MyReservations"
-          >
-            <h2 className="selector">My reservations</h2>
-          </NavLink>
-          <NavLink
-            onClick={() => navbarHandler('close-nav')}
-            className="selector-container"
-            exact="true"
-            to="/AddCar"
-          >
-            <h2 className="selector">Add cars</h2>
-          </NavLink>
-          <NavLink
-            onClick={() => navbarHandler('close-nav')}
-            className="selector-container"
-            exact="true"
-            to="/DeleteCar"
-          >
-            <h2 className="selector">Delete cars</h2>
-          </NavLink>
+        <ul className="navbar-list flex flex-col">
+          <li className="header-container flex items-center justify-center h-32">
+            <h2 className="header-logo">Cars</h2>
+          </li>
+          <div className="h-screen space-y-5">
+            <NavLink
+              onClick={() => navbarHandler('close-nav')}
+              className="selector-container mx-5 px-5 font-bold h-10"
+              exact="true"
+              to="/"
+            >
+              <h2 className="selector">Cars</h2>
+            </NavLink>
+            <NavLink
+              onClick={() => navbarHandler('close-nav')}
+              className="selector-container mx-5 px-5 font-bold h-10"
+              exact="true"
+              to="/Reserve"
+            >
+              <h2 className="selector">Reserve</h2>
+            </NavLink>
+            <NavLink
+              onClick={() => navbarHandler('close-nav')}
+              className="selector-container mx-5 px-5 font-bold h-10"
+              exact="true"
+              to="/MyReservations"
+            >
+              <h2 className="selector w-full">My reservations</h2>
+            </NavLink>
+            <NavLink
+              onClick={() => navbarHandler('close-nav')}
+              className="selector-container mx-5 px-5 font-bold h-10"
+              exact="true"
+              to="/AddCar"
+            >
+              <h2 className="selector">Add cars</h2>
+            </NavLink>
+            <NavLink
+              onClick={() => navbarHandler('close-nav')}
+              className="selector-container mx-5 px-5 font-bold h-10"
+              exact="true"
+              to="/DeleteCar"
+            >
+              <h2 className="selector">Delete cars</h2>
+            </NavLink>
+          </div>
           <li className="social-container">
-            <div className="social-main-container d-flex">
-              <ImTwitter />
-              <ImFacebook />
-              <ImGithub />
-              <ImPinterest />
+            <div className="absolute inset-x-0 bottom-0 h-16">
+              <div className="social-main-container d-flex space-x-4">
+                <ImTwitter />
+                <ImFacebook />
+                <ImGithub />
+                <ImPinterest />
+              </div>
+              <p className="rights-res-desk">Most rights are reserved</p>
             </div>
-            <p className="rights-res-desk">Most rights are reserved</p>
           </li>
         </ul>
       </nav>
