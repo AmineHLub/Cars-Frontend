@@ -1,12 +1,22 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
+# Final group capstone - Car reservation Frontend
+
+![Microverse](https://img.shields.io/badge/Microverse-blueviolet)
 
 # Project Name
 
-> One paragraph statement about the project.
+- [Kanban board](https://github.com/mmsesay/final-capstone-backend/projects/1#card-77937550)
+
+> Frontend Car booking app.
 
 ![screenshot](./app_screenshot.png)
 
 Additional description about the project and its features.
+
+## Backend
+
+[API Documentation](https://name.herokuapp.com/)
+
+[GitHub Repo](https://github.com/mmsesay/final-capstone-backend)
 
 ## Built With
 
@@ -18,28 +28,39 @@ Additional description about the project and its features.
 
 [Live Demo Link](https://livedemo.com)
 
+## Built With
+
+- React
+- Redux
+- React Router
 
 ## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
 
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
+- NodeJS - [v16.x](https://nodejs.org/en/)
+- Yarn - [1.22.15](https://yarnpkg.com/)
+
 ### Setup
+
+```bash
+git clone git@github.com:AmineHLub/Cars-Frontend.git
+cd ./rooms-frontend
+```
 
 ### Install
 
+```bash
+yarn
+```
+
 ### Usage
 
-### Run tests
-
-### Deployment
-
-
+```bash
+yarn start
+```
 
 ## Authors
 
@@ -78,9 +99,8 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- Microverse
+- Original design by [Murat Korkmaz](https://www.behance.net/muratk) on Behance
 
 ## 📝 License
 
