@@ -10,19 +10,13 @@
 
 ![screenshot](./app_screenshot.png)
 
-Additional description about the project and its features.
+This app is meant for us to book a car, add a car, reserve a car, and delete a car.
 
 ## Backend
 
 [API Documentation](https://name.herokuapp.com/)
 
 [GitHub Repo](https://github.com/mmsesay/final-capstone-backend)
-
-## Built With
-
-- Major languages
-- Frameworks
-- Technologies used
 
 ## Live Demo
 
