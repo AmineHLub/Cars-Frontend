@@ -7,6 +7,7 @@ import MyReservations from './Components/Pages/MyReservations';
 import AddCar from './Components/Pages/AddCar';
 import DeleteCar from './Components/Pages/DeleteCar';
 import carSampleData from './data/sample_data';
+import backIcon from './assets/images/back-icon.svg';
 
 function App() {
   return (
@@ -20,6 +21,9 @@ function App() {
           <Route path="/AddCar" element={<AddCar />} />
           <Route path="/DeleteCar" element={<DeleteCar />} />
         </Routes>
+        <div className="bg-primaryGreen absolute bottom-0 w-16 z-40 h-12 mb-14 rounded-tr-full rounded-br-full flex items-center justify-end px-4">
+          <img src={backIcon} alt={backIcon} className="w-4 h-4 rotate-180" />
+        </div>
       </main>
     </Router>
   );

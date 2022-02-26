@@ -17,7 +17,7 @@ const Navbar = () => {
       </nav>
       <nav className={`navbar-fixed-container ${navState}`}>
         <IoCloseCircle onClick={() => navbarHandler('close-nav')} />
-        <ul className="navbar-list flex flex-col">
+        <ul className="navbar-list flex flex-col border-r">
           <li className="header-container flex items-center justify-center h-32">
             <h2 className="header-logo">Cars</h2>
           </li>
