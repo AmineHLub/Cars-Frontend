@@ -19,7 +19,9 @@
     "react/react-in-jsx-scope": "off",
     "import/no-unresolved": "off",
     "no-shadow": "off",
-    "react/prop-types": "off"
+    "react/prop-types": "off",
+    "import/no-named-as-default": 0,
+    "import/no-named-as-default-member": 0
   },
   "ignorePatterns": [
     "dist/",
