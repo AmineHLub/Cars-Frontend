@@ -25,6 +25,7 @@
   },
   "ignorePatterns": [
     "dist/",
-    "build/"
+    "build/",
+    "tailwind.config.js"
   ]
 }
