@@ -17,7 +17,7 @@ const Car = () => {
         onClick={handleButtonStateChange}
         className="m-5 bg-primaryGreen p-3 text-white"
       >
-        Goto Reserve Car
+        Go to Reserve Car
       </button>
 
       {/* car details only show on button trigger  */}
