@@ -1,7 +1,5 @@
 const MyReservations = () => (
-  <div className="flex h-full py-32">
-    My Reservations
-  </div>
+  <div>MyReservations</div>
 );
 
 export default MyReservations;
