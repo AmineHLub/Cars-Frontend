@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+/* @import 'antd/dist/antd.min.css'; */
+
 .d-flex {
   display: flex;
 }
