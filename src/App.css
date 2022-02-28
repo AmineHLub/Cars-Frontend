@@ -25,6 +25,13 @@ main {
   background-color: gainsboro;
 }
 
+.bg-show-car {
+  background-image: url('./assets/images/show-car-2.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
 @media only screen and
   (min-width: 768px)
   and (max-width: 1054px) {
@@ -38,5 +45,9 @@ main {
   main {
     top: 60px;
     left: 0;
+  }
+
+  .bg-show-car {
+    background-size: contain !important;
   }
 }
