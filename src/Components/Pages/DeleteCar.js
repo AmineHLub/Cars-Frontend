@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { removeCar, fetchCars } from '../../Store/action/carActions';
-import style from './Delete.scss';
 
 const DeleteCar = () => {
   const dispatch = useDispatch();
