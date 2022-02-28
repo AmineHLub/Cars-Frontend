@@ -19,7 +19,6 @@ export const removeCar = (userId, id) => (dispatch) => {
     return response;
   });
 };
-
 export const addCar = (car) => (dispatch) => {
   cars.addCar(car).then((response) => {
     if (response.id) {
