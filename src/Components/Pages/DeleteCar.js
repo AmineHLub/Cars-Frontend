@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { removeCar, fetchCars } from '../../store/action/carActions';
+import { removeCar, fetchCars } from '../../Store/action/carActions';
 import style from './Delete.scss';
 
 const DeleteCar = () => {
@@ -59,7 +59,7 @@ const DeleteCar = () => {
           </span>
         </div>
       </div>
-      <button type="button" onClick={() => deletecar(car.user_id, car.id)} className={style.btn_danger}>Delete</button>
+      <button type="button" onClick={() => deleteCar(car.user_id, car.id)} className={style.btn_danger}>Delete</button>
     </li>
   ));
 
