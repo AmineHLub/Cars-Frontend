@@ -20,7 +20,7 @@ function App() {
           <Route path="/AddCar" element={<AddCar />} />
           <Route path="/DeleteCar" element={<DeleteCar />} />
         </Routes>
-        <div className="bg-primaryGreen absolute bottom-0 w-16 z-40 h-12 mb-14 rounded-tr-full rounded-br-full flex items-center justify-end px-4">
+        <div className="bg-primaryGreen absolute bottom-0 w-16 z-40 h-12 mb-14 rounded-tr-full rounded-br-full md:flex items-center justify-end px-4 hidden">
           <img src={backIcon} alt={backIcon} className="w-4 h-4 rotate-180" />
         </div>
       </main>
