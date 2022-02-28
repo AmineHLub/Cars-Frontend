@@ -6,5 +6,5 @@ const ActionTypes = {
   ADD_CAR: 'ADD_CAR',
   DELETE_CAR: 'DELETE_CAR',
 };
-  
+
 export default ActionTypes;
