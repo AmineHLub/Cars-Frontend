@@ -5,14 +5,12 @@ export const receiveCars = (cars) => ({
   type: ActionTypes.RECEIVE_CARS,
   cars,
 });
-
 export const fetchCars = () => (dispatch) => {
   cars.fetchCars().then((cars) => {
     dispatch(receiveCars(cars));
     return cars;
   });
 };
-
 export const removeCar = (userId, id) => (dispatch) => {
   cars.removeCar(userId, id).then((response) => {
     dispatch(fetchCars());
