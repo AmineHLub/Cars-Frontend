@@ -1,5 +1,5 @@
 import cars from '../../api/cars';
-import ActionTypes from '../types/action-types';
+import ActionTypes from '../types/types';
 
 export const receiveCars = (cars) => ({
   type: ActionTypes.RECEIVE_CARS,
