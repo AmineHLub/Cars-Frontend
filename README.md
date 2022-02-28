@@ -14,7 +14,7 @@ This app is meant for us to book a car, add a car, reserve a car, and delete a c
 
 ## Backend
 
-[API Documentation](https://name.herokuapp.com/)
+[API Documentation](https://rails-cars-app.herokuapp.com/api/v1)
 
 [GitHub Repo](https://github.com/mmsesay/final-capstone-backend)
 
