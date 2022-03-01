@@ -1,0 +1,63 @@
+.cars-container {
+  margin: 0 1%;
+  flex-flow: row wrap;
+}
+
+.car-card {
+  cursor: pointer;
+  width: 31%;
+  margin: 10px 1%;
+  height: 250px;
+  border-radius: 10px;
+  border: 1px solid gray;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 60% 15% 25%;
+  place-items: center;
+}
+
+.car-card:hover {
+  box-shadow: -1px 16px 17px 0 rgb(102 102 102);
+}
+
+/* detail page */
+
+.detail-page-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: grid;
+  grid-template-columns: 70% 30%;
+  grid-template-rows: 1fr;
+}
+
+.selected-car-img-container {
+  place-self: center center;
+}
+
+.selected-car-info-container {
+  place-self: center end;
+}
+
+.go-back-btn {
+  position: absolute;
+  z-index: 3;
+  left: 0;
+  bottom: 25px;
+  width: 65px;
+  height: 45px;
+  background-color: #94c414;
+  border: none;
+  cursor: pointer;
+  border-radius: 10% 37% 33% 10% / 0% 48% 51% 0%;
+}
+
+.go-back-btn > svg {
+  fill: white;
+}
+
+.go-back-btn:hover {
+  background-color: #65801b;
+}
