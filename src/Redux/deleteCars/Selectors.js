@@ -1,8 +1,6 @@
 import axios from 'axios';
 import baseUrl from '../State/baseUrl'
 
-// eslint-disable-next-line import/prefer-default-export
-/*eslint semi: ["error", "never"]*/
 export const isConnect = async () => {
   let answer = false;
   let token = '';
