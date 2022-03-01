@@ -19,6 +19,7 @@
     "react/no-unescaped-entities": 0,
     "react/react-in-jsx-scope": "off",
     "import/no-unresolved": "off",
+    "beforeStatementContinuationChars": "never",
     "no-shadow": "off",
     "react/prop-types": "off",
     "import/no-named-as-default": 0,
