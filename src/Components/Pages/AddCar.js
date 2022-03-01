@@ -1,8 +1,9 @@
 import React from 'react';
+import '../../assets/car-page/cars.css';
 
 const AddCar = () => (
-  <div className="container">
-    <div className="add-box">
+  <div className="form-container">
+    <div className="add-box double">
       <h1>Add a Car</h1>
       <div className="labeled">
         <input required type="text" placeholder="Name" name="name" id="name" />
@@ -19,8 +20,8 @@ const AddCar = () => (
       <div className="labeled">
         <input type="file" className="input linput" name="image" id="image" />
       </div>
-      <button type="button" className="log-button add-b">Create</button>
     </div>
+    <button type="button" className="log-button add-b">Create</button>
   </div>
 );
 export default AddCar;
