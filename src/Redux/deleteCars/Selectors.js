@@ -1,5 +1,5 @@
 import axios from 'axios';
-import baseUrl from '../State/baseUrl'
+import baseUrl from '../State/baseUrl';
 
 export const isConnect = async () => {
   let answer = false;
