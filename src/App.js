@@ -2,6 +2,7 @@ import {
   BrowserRouter as Router, Routes,
   Route,
 } from 'react-router-dom';
+// import { useState } from 'react';
 import Navbar from './Components/Navbar/Navbar';
 import Car from './Components/Pages/Car';
 import Reserve from './Components/Pages/Reserve';
@@ -10,9 +11,22 @@ import AddCar from './Components/Pages/AddCar';
 import DeleteCar from './Components/Pages/DeleteCar';
 import backIcon from './assets/images/back-icon.svg';
 import './styles/App.css';
-// import './styles/App.less';
+import 'react-datepicker/dist/react-datepicker.css';
 
 function App() {
+  // const [selectedDate, setSelectedDate] = useState(null);
+
+  // const calendar = () => (
+  //   <div className="mt-4 bg-blue-400 p-3">
+  //     <DatePicker
+  //       dateFormat="dd/MM/yyyy"
+  //       selected={selectedDate}
+  //       onChange={(date) => setSelectedDate(date)}
+  //       minDate={new Date()}
+  //     />
+  //   </div>
+  // );
+
   return (
     <Router>
       <Navbar />
