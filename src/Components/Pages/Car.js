@@ -14,7 +14,7 @@ const Car = () => {
     (car) => car.toShow,
   );
 
-  // every time a user used to go to the CARS page, it fetched again from API, 
+  // every time a user used to go to the CARS page, it fetched again from API,
   // meaning it restored also the deleted items, that's why I had to
   // added line 22, so it fetches only when the list is empty at the beginning.
   const dispatch = useDispatch();

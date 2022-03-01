@@ -3,7 +3,7 @@ import { MdArrowBack } from 'react-icons/md';
 import { GrAddCircle } from 'react-icons/gr';
 
 const Detail = ({ selectedCar, setSelectedCar }) => {
-  console.log(selectedCar, setSelectedCar);
+// console.log(selectedCar, setSelectedCar);
   return (
     <div className="detail-page-container">
       <div className="selected-car-img-container">
