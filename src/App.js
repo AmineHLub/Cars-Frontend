@@ -1,4 +1,3 @@
-import './App.css';
 import {
   BrowserRouter as Router, Routes,
   Route,
@@ -10,6 +9,8 @@ import MyReservations from './Components/Pages/MyReservations';
 import AddCar from './Components/Pages/AddCar';
 import DeleteCar from './Components/Pages/DeleteCar';
 import backIcon from './assets/images/back-icon.svg';
+import './styles/App.css';
+// import './styles/App.less';
 
 function App() {
   return (

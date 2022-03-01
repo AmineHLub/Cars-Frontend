@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @import 'antd/dist/antd.min.css'; */
-
 .d-flex {
   display: flex;
 }
@@ -28,7 +26,7 @@ main {
 }
 
 .bg-show-car {
-  background-image: url('./assets/images/show-car-2.png');
+  background-image: url('../assets/images/show-car-2.png');
   background-position: center;
   background-repeat: no-repeat;
   height: 100%;
