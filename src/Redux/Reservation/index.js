@@ -1,5 +1,5 @@
-// import Axios from 'axios';
-// import baseUrl from '../State/baseUrl';
+import Axios from 'axios';
+import baseUrl from '../State/baseUrl';
 
 // const GET_RESERVATIONS = 'reservation/GET_RESERVATIONS';
 const CREATE_RESERVATION = 'reservation/CREATE_RESERVATION';
@@ -10,10 +10,16 @@ const initialState = {
 };
 
 // Actions
-export const createReservationAction = (json) => ({
-  type: CREATE_RESERVATION,
-  json,
-});
+export const createReservationAction = (json) => async (dispatch) => {
+  const response = await Axios.post(`${baseUrl}/reservations`, json);
+
+  if (response.data.status === 200) {
+    dispatch({
+      type: CREATE_RESERVATION,
+      json,
+    });
+  }
+};
 
 const reservationReducer = (state = initialState, action) => {
   switch (action.type) {

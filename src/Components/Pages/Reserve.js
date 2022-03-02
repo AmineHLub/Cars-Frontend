@@ -1,9 +1,8 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import DatePicker from 'react-datepicker';
 import { useForm } from 'react-hook-form';
 import 'react-datepicker/dist/react-datepicker.css';
 import Select from 'react-select';
-// import Axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
 import { createReservationAction } from '../../Redux/Reservation';
 
@@ -11,16 +10,13 @@ import carIcon from '../../assets/images/car-icon.svg';
 import pendingIcon from '../../assets/images/pending-icon.svg';
 import calendarIcon from '../../assets/images/calendar-icon.svg';
 
-const options = [
-  { value: 'car 1', label: 'car 1' },
-  { value: 'car 2', label: 'car 2' },
-  { value: 'car 3', label: 'car 3' },
-];
+// will hold the options for the car selection tag
+const options = [];
 
 const Reserve = () => {
-  const reservationState = useSelector((state) => state.reservationReducer.reservations);
+  // const reservationState = useSelector((state) => state.reservationReducer.reservations);
   const userState = useSelector((state) => state.userReducer);
-  // const carState = useSelector((state) => state.carReducer);
+  const carState = useSelector((state) => state.carReducer);
   const dispatch = useDispatch();
   const { register, handleSubmit } = useForm();
   const [selectedDate, setSelectedDate] = useState(null);
@@ -34,16 +30,20 @@ const Reserve = () => {
       duration: data.duration,
     };
 
-    // const response = await Axios.post(`${baseUrl}/reservations`, details);
+    // dispatch the data to the create action
     dispatch(createReservationAction(reserveData));
-    console.log(reservationState);
   };
 
+  useEffect(() => {
+    // loop through the cars and push the object to the options arrays
+    carState.map((car) => options.push({ value: car.id, label: car.name }));
+  }, []);
+
   return (
-    <div className="h-full bg-primaryGreen">
+    <div className="absolute h-screen bg-primaryGreen w-full">
       <div className="bg-show-car opacity-20" />
       <div className="text-white opacity" />
-      <div className="absolute top-0 h-full w-full flex items-center justify-center">
+      <div className="absolute top-0 h-screen w-full flex items-center justify-center">
         <div className="py-4 px-4 flex flex-col items-center justify-center">
           <div className="text-center p-4 w-full md:w-2/3">
             <h3 className="text-white text-lg md:text-2xl md:mb-10 font-bold">
