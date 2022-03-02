@@ -20,6 +20,7 @@ const options = [
 const Reserve = () => {
   const reservationState = useSelector((state) => state.reservationReducer.reservations);
   const userState = useSelector((state) => state.userReducer);
+  // const carState = useSelector((state) => state.carReducer);
   const dispatch = useDispatch();
   const { register, handleSubmit } = useForm();
   const [selectedDate, setSelectedDate] = useState(null);
