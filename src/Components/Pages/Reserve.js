@@ -3,17 +3,24 @@ import DatePicker from 'react-datepicker';
 import { useForm } from 'react-hook-form';
 import 'react-datepicker/dist/react-datepicker.css';
 import Select from 'react-select';
+// import Axios from 'axios';
+import { useDispatch, useSelector } from 'react-redux';
+import { createReservationAction } from '../../Redux/Reservation';
+
 import carIcon from '../../assets/images/car-icon.svg';
 import pendingIcon from '../../assets/images/pending-icon.svg';
 import calendarIcon from '../../assets/images/calendar-icon.svg';
 
 const options = [
-  { value: 'chocolate', label: 'Chocolate' },
-  { value: 'strawberry', label: 'Strawberry' },
-  { value: 'vanilla', label: 'Vanilla' },
+  { value: 'car 1', label: 'car 1' },
+  { value: 'car 2', label: 'car 2' },
+  { value: 'car 3', label: 'car 3' },
 ];
 
 const Reserve = () => {
+  const reservationState = useSelector((state) => state.reservationReducer.reservations);
+  const userState = useSelector((state) => state.userReducer);
+  const dispatch = useDispatch();
   const { register, handleSubmit } = useForm();
   const [selectedDate, setSelectedDate] = useState(null);
   const [selectedCar, setSelectedCar] = useState(null);
@@ -21,12 +28,14 @@ const Reserve = () => {
   const onSubmit = (data) => {
     const reserveData = {
       car_id: selectedCar,
-      user_id: 1,
+      user_id: userState.id,
       start_date: selectedDate,
       duration: data.duration,
     };
 
-    console.log(reserveData);
+    // const response = await Axios.post(`${baseUrl}/reservations`, details);
+    dispatch(createReservationAction(reserveData));
+    console.log(reservationState);
   };
 
   return (
