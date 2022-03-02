@@ -1,3 +1,7 @@
+body {
+  position: relative;
+}
+
 .cars-container {
   margin: 0 1%;
   flex-flow: row wrap;
@@ -132,5 +136,134 @@
 
   .selected-car-info-container {
     background: #fff;
+  }
+}
+
+.add-box {
+  background: #fff;
+  width: 83.7vw;
+  margin: 65px auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.labeled {
+  font-size: 16px;
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  padding: 10px 1px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  align-content: center;
+}
+
+.double {
+  display: flex;
+  width: 100%;
+}
+
+.input {
+  font-size: 16px;
+  display: block;
+  font-family: "Rubik", sans-serif;
+  width: 35%;
+  padding: 10px 1px;
+  border: 0;
+  border-bottom: 1px solid #747474;
+  outline: none;
+}
+
+.linput {
+  width: 80%;
+}
+
+.bigput {
+  width: 80%;
+  border: 2px;
+  border-radius: 1px;
+  border-style: solid;
+  border-color: #747474;
+  height: 100px;
+  text-align: start;
+}
+
+h1 {
+  flex-direction: row;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.add-b {
+  width: 30%;
+  border: none;
+  padding: 18px;
+  font-family: "Rubik", sans-serif;
+  cursor: pointer;
+  border-radius: 2px;
+  flex-direction: row;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.log-button {
+  background-color: #94c414;
+}
+
+.delete-cars-container {
+  width: 90%;
+  margin-left: 5%;
+}
+
+.car-table-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid rgb(126, 126, 126);
+  border-radius: 8px;
+  margin: 10px 5%;
+  padding: 10px;
+}
+
+.car-table-card > img,
+.car-card > img {
+  height: 90px;
+}
+
+.car-table-card > button {
+  background-color: #793d3d;
+  padding: 7px 15px;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  color: white;
+}
+
+.car-table-card > button:hover {
+  background-color: #c41414;
+}
+
+@media only screen and (max-width: 668px) {
+  .form-container {
+    position: absolute;
+    z-index: 100;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0%;
+  }
+
+  .add-box {
+    position: absolute;
+    width: 100vw;
+    margin: 0 0;
+    border-radius: 1px;
+    height: 100vh;
   }
 }
