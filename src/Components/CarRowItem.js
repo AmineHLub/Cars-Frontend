@@ -1,6 +1,5 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import PropTypes from 'prop-types';
 import { markDeleted } from '../Redux/State/Car';
 
 const CarRowItem = (props) => {
@@ -32,11 +31,4 @@ const CarRowItem = (props) => {
     </tr>
   );
 };
-
-CarRowItem.propTypes = {
-  carId: PropTypes.number.isRequired,
-  carName: PropTypes.string.isRequired,
-  carModel: PropTypes.string.isRequired,
-};
-
 export default CarRowItem;
