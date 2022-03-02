@@ -30,7 +30,7 @@ const MyReservations = () => {
     <div className="absolute h-screen bg-primaryGreen w-full">
       <div className="bg-show-car opacity-20" />
       <div className="text-white opacity" />
-      <div className="absolute top-0 h-screen w-full flex items-start justify-center">
+      <div className="absolute top-0 h-screen w-full">
         <div className="py-4 px-4 flex flex-col items-center justify-center">
           <div className="text-center p-4 w-full md:w-2/3">
             <h3 className="text-white text-lg md:text-2xl md:mb-10 font-bold">
@@ -40,25 +40,36 @@ const MyReservations = () => {
               You can manage your cars here.
             </p>
           </div>
-          <div className="p-1 border overflow-hidden border-white rounded-md w-auto mx-4 md:w-1/2 md:mt-10">
+          <div className="p-1 border overflow-hidden border-white rounded-md mx-4 md:w-1/2 md:mt-10">
             <div className="overflow-x-auto">
-              <div className="shadow-md bg-white w-auto flex justify-center mx-auto">
+              <div className="shadow-md bg-white">
                 <table className="w-auto flex flex-col">
                   <thead>
                     <tr className="flex space-x-5 w-full h-auto bg-gray-800 p-2 text-gray-200">
-                      <th className="text-sm">Name</th>
-                      <th className="text-sm">Start Date</th>
-                      <th className="text-sm">End Date</th>
-                      <th className="text-sm">Duration</th>
+                      <th className="text-sm w-1/4">Name</th>
+                      <th className="text-sm w-1/4">Start Date</th>
+                      <th className="text-sm w-1/4">End Date</th>
+                      <th className="text-sm w-1/4">Duration</th>
+                      <th className="text-sm w-1/4">Actions</th>
                     </tr>
                   </thead>
                   <tbody>
-                    <tr key={reservationState.id} className="flex space-x-5 w-full p-2">
-                      <td>{reservationState.car_id}</td>
-                      <td>{reservationState.start_date.toString().slice(4, 16)}</td>
-                      <td>Name</td>
-                      <td>{reservationState.duration}</td>
+                    { reservationState && (
+                    <tr key={reservationState?.id} className="flex item-center space-x-5 w-full p-2 text-center">
+                      {/* <td>{reservationState?.car_id}</td> */}
+                      {/* <td>{reservationState?.start_date?.toString().slice(4, 16)}</td> */}
+                      {/* <td>{reservationState?.duration}</td> */}
+                      <td className="text-sm w-1/4">Name</td>
+                      <td className="text-sm w-1/4">Name</td>
+                      <td className="text-sm w-1/4">Name</td>
+                      <td className="text-sm w-1/4">Name</td>
+                      <td className="text-sm w-1/4">
+                        <button type="button" className="bg-red-500 p-2 rounded-md text-white hover:bg-red-600">
+                          Delete
+                        </button>
+                      </td>
                     </tr>
+                    )}
                   </tbody>
                 </table>
               </div>
