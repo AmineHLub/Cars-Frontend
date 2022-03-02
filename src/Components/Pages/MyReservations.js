@@ -1,9 +1,9 @@
-import { useEffect } from 'react';
-// import { useDispatch, useSelector } from 'react-redux';
-// import { createReservationAction } from '../../Redux/Reservation';
+// import { useEffect } from 'react';
+import { useSelector } from 'react-redux';
+// import { fetchReservations } from '../../Redux/Reservation';
 
 const MyReservations = () => {
-  // const reservationState = useSelector((state) => state.reservationReducer.reservations);
+  const reservationState = useSelector((state) => state.reservationReducer.reservations);
   // const userState = useSelector((state) => state.userReducer);
   // const carState = useSelector((state) => state.carReducer);
   // const dispatch = useDispatch();
@@ -20,7 +20,11 @@ const MyReservations = () => {
   //   dispatch(createReservationAction(reserveData));
   // };
 
-  useEffect(() => {}, []);
+  console.log(reservationState);
+
+  // useEffect(() => {
+  //   dispatch(fetchReservations);
+  // }, []);
 
   return (
     <div className="absolute h-screen bg-primaryGreen w-full">
@@ -43,19 +47,17 @@ const MyReservations = () => {
                   <thead>
                     <tr className="flex space-x-5 w-full h-auto bg-gray-800 p-2 text-gray-200">
                       <th className="text-sm">Name</th>
-                      <th className="text-sm">Description</th>
                       <th className="text-sm">Start Date</th>
                       <th className="text-sm">End Date</th>
                       <th className="text-sm">Duration</th>
                     </tr>
                   </thead>
                   <tbody>
-                    <tr className="flex space-x-5 w-full p-2">
+                    <tr key={reservationState.id} className="flex space-x-5 w-full p-2">
+                      <td>{reservationState.car_id}</td>
+                      <td>{reservationState.start_date.toString().slice(4, 16)}</td>
                       <td>Name</td>
-                      <td>Name</td>
-                      <td>Name</td>
-                      <td>Name</td>
-                      <td>duration</td>
+                      <td>{reservationState.duration}</td>
                     </tr>
                   </tbody>
                 </table>

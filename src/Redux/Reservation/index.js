@@ -1,7 +1,7 @@
 import Axios from 'axios';
 import baseUrl from '../State/baseUrl';
 
-// const GET_RESERVATIONS = 'reservation/GET_RESERVATIONS';
+const GET_RESERVATIONS = 'reservation/GET_RESERVATIONS';
 const CREATE_RESERVATION = 'reservation/CREATE_RESERVATION';
 
 // initial state
@@ -21,10 +21,23 @@ export const createReservationAction = (json) => async (dispatch) => {
   }
 };
 
+// get resrevations
+export const fetchReservations = () => async (dispatch) => {
+  const response = await Axios.get(`${baseUrl}/reservations`);
+  const fetchedData = response.data;
+
+  dispatch({
+    type: GET_RESERVATIONS,
+    payload: fetchedData,
+  });
+};
+
 const reservationReducer = (state = initialState, action) => {
   switch (action.type) {
     case CREATE_RESERVATION:
       return { reservations: action.json };
+    case GET_RESERVATIONS:
+      return action.payload;
     default:
       return state;
   }
