@@ -188,7 +188,8 @@ body {
   height: 100px;
   text-align: start;
 }
-h1{
+
+h1 {
   flex-direction: row;
   display: flex;
   justify-content: center;
@@ -214,6 +215,39 @@ h1{
 
 .log-button {
   background-color: #94c414;
+}
+
+.delete-cars-container {
+  width: 90%;
+  margin-left: 5%;
+}
+
+.car-table-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid rgb(126, 126, 126);
+  border-radius: 8px;
+  margin: 10px 5%;
+  padding: 10px;
+}
+
+.car-table-card > img,
+.car-card > img {
+  height: 90px;
+}
+
+.car-table-card > button {
+  background-color: #793d3d;
+  padding: 7px 15px;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  color: white;
+}
+
+.car-table-card > button:hover {
+  background-color: #c41414;
 }
 
 @media only screen and (max-width: 668px) {
