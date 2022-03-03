@@ -9,7 +9,7 @@ body {
 
 .car-card {
   cursor: pointer;
-  width: 31%;
+  width: 21%;
   margin: 10px 1%;
   height: 250px;
   border-radius: 10px;
@@ -115,7 +115,7 @@ body {
   .car-card {
     width: 80%;
     margin: 10px 10%;
-    height: 350px;
+    height: 250px;
   }
 
   .detail-page-container {
