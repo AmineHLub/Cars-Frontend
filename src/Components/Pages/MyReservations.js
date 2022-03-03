@@ -1,12 +1,12 @@
-// import { useEffect } from 'react';
-import { useSelector } from 'react-redux';
-// import { fetchReservations } from '../../Redux/Reservation';
+import { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { fetchReservations } from '../../Redux/Reservation';
 
 const MyReservations = () => {
   const reservationState = useSelector((state) => state.reservationReducer.reservations);
   // const userState = useSelector((state) => state.userReducer);
   // const carState = useSelector((state) => state.carReducer);
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
   // const onSubmit = (data) => {
   //   const reserveData = {
@@ -22,9 +22,9 @@ const MyReservations = () => {
 
   console.log(reservationState);
 
-  // useEffect(() => {
-  //   dispatch(fetchReservations);
-  // }, []);
+  useEffect(() => {
+    dispatch(fetchReservations);
+  }, []);
 
   return (
     <div className="absolute h-screen bg-primaryGreen w-full">

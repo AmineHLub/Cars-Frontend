@@ -1,44 +1,36 @@
-import { useState, useEffect } from 'react';
-import DatePicker from 'react-datepicker';
+import { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import 'react-datepicker/dist/react-datepicker.css';
 import Select from 'react-select';
 import { useDispatch, useSelector } from 'react-redux';
 import { createReservationAction } from '../../Redux/Reservation';
 
 import carIcon from '../../assets/images/car-icon.svg';
 import pendingIcon from '../../assets/images/pending-icon.svg';
-import calendarIcon from '../../assets/images/calendar-icon.svg';
-
-// will hold the options for the car selection tag
-const options = [];
 
 const Reserve = ({ pendingReservations }) => {
   console.log(pendingReservations);
-  // const reservationState = useSelector((state) => state.reservationReducer.reservations);
   const userState = useSelector((state) => state.userReducer);
-  const carState = useSelector((state) => state.carReducer);
   const dispatch = useDispatch();
   const { register, handleSubmit } = useForm();
-  const [selectedDate, setSelectedDate] = useState(null);
   const [selectedCar, setSelectedCar] = useState(null);
 
   const onSubmit = (data) => {
     const reserveData = {
       car_id: selectedCar,
       user_id: userState.id,
-      start_date: selectedDate,
       duration: data.duration,
     };
 
     // dispatch the data to the create action
     dispatch(createReservationAction(reserveData));
+    // pendingReservations = [];
   };
 
-  useEffect(() => {
-    // loop through the cars and push the object to the options arrays
-    carState.map((car) => options.push({ value: car.id, label: car.name }));
-  }, []);
+  // will hold the options for the car selection tag
+  const options = [];
+
+  // loop through the cars and push the object to the options arrays
+  pendingReservations.map((car) => options.push({ value: car.id, label: car.name }));
 
   return (
     <div className="absolute h-screen bg-primaryGreen w-full">
@@ -70,23 +62,6 @@ const Reserve = ({ pendingReservations }) => {
                 placeholder="Select a car"
                 className="w-full h-full"
               />
-            </div>
-            <div className="border border-gray-300 flex items-center justify-center w-full">
-              <div className="w-10">
-                <div className="flex left-0 w-10 items-center pl-3 pointer-events-none">
-                  <img src={calendarIcon} alt="carIcon" className="w-5 h-5 text-gray-500" />
-                </div>
-              </div>
-              <div className="w-full">
-                <DatePicker
-                  dateFormat="dd/MM/yyyy"
-                  selected={selectedDate}
-                  onChange={(date) => setSelectedDate(date)}
-                  minDate={new Date()}
-                  className="h-12 w-full pl-3"
-                  placeholderText="Select date"
-                />
-              </div>
             </div>
             <div className="border border-gray-300 flex items-center">
               <div className="w-10">
