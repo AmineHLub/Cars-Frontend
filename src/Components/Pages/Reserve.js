@@ -1,39 +1,40 @@
 import { useState } from 'react';
-import DatePicker from 'react-datepicker';
 import { useForm } from 'react-hook-form';
-import 'react-datepicker/dist/react-datepicker.css';
+import { useNavigate } from 'react-router-dom';
 import Select from 'react-select';
+import { useSelector } from 'react-redux';
+import Axios from 'axios';
+import baseUrl from '../../Redux/State/baseUrl';
+
 import carIcon from '../../assets/images/car-icon.svg';
 import pendingIcon from '../../assets/images/pending-icon.svg';
-import calendarIcon from '../../assets/images/calendar-icon.svg';
 
-const options = [
-  { value: 'chocolate', label: 'Chocolate' },
-  { value: 'strawberry', label: 'Strawberry' },
-  { value: 'vanilla', label: 'Vanilla' },
-];
-
-const Reserve = () => {
+const Reserve = ({ pendingReservations, setPending }) => {
+  const userState = useSelector((state) => state.userReducer);
+  const navigate = useNavigate();
   const { register, handleSubmit } = useForm();
-  const [selectedDate, setSelectedDate] = useState(null);
   const [selectedCar, setSelectedCar] = useState(null);
 
-  const onSubmit = (data) => {
+  const onSubmit = async (data) => {
     const reserveData = {
       car_id: selectedCar,
-      user_id: 1,
-      start_date: selectedDate,
+      user_id: userState.id,
       duration: data.duration,
     };
-
-    console.log(reserveData);
+    await Axios.post(`${baseUrl}/reservations`, reserveData);
+    const newPendingReservations = pendingReservations.filter((element) => element.id !== reserveData.car_id);
+    setPending(newPendingReservations);
+    navigate('/MyReservations', { replace: true });
   };
 
+  const options = [];
+  pendingReservations.map((car) => options.push({ value: car.id, label: car.name }));
+
   return (
-    <div className="h-full bg-primaryGreen">
+    <div className="absolute h-screen bg-primaryGreen w-full">
       <div className="bg-show-car opacity-20" />
       <div className="text-white opacity" />
-      <div className="absolute top-0 h-full w-full flex items-center justify-center">
+      <div className="absolute top-0 h-screen w-full flex items-center justify-center">
         <div className="py-4 px-4 flex flex-col items-center justify-center">
           <div className="text-center p-4 w-full md:w-2/3">
             <h3 className="text-white text-lg md:text-2xl md:mb-10 font-bold">
@@ -59,23 +60,6 @@ const Reserve = () => {
                 placeholder="Select a car"
                 className="w-full h-full"
               />
-            </div>
-            <div className="border border-gray-300 flex items-center justify-center w-full">
-              <div className="w-10">
-                <div className="flex left-0 w-10 items-center pl-3 pointer-events-none">
-                  <img src={calendarIcon} alt="carIcon" className="w-5 h-5 text-gray-500" />
-                </div>
-              </div>
-              <div className="w-full">
-                <DatePicker
-                  dateFormat="dd/MM/yyyy"
-                  selected={selectedDate}
-                  onChange={(date) => setSelectedDate(date)}
-                  minDate={new Date()}
-                  className="h-12 w-full pl-3"
-                  placeholderText="Select date"
-                />
-              </div>
             </div>
             <div className="border border-gray-300 flex items-center">
               <div className="w-10">

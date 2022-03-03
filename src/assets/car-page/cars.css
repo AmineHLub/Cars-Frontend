@@ -32,6 +32,7 @@ body {
   right: 0;
   left: 0;
   bottom: 0;
+  height: 100vh;
   display: grid;
   grid-template-columns: 70% 30%;
   grid-template-rows: 1fr;
@@ -91,7 +92,7 @@ body {
   position: absolute;
   z-index: 3;
   left: 0;
-  bottom: 25px;
+  bottom: 25%;
   width: 65px;
   height: 45px;
   background-color: #94c414;
@@ -164,14 +165,12 @@ body {
   width: 100%;
 }
 
-.input {
-  font-size: 16px;
-  display: block;
-  font-family: "Rubik", sans-serif;
-  width: 35%;
-  padding: 10px 1px;
-  border: 0;
+#add-car-form > div:not(:nth-child(6)) > input {
+  padding: 10px 2%;
   border-bottom: 1px solid #747474;
+}
+
+#add-car-form > div:not(:nth-child(6)) > input:focus {
   outline: none;
 }
 
@@ -201,7 +200,9 @@ h1 {
 .add-b {
   width: 30%;
   border: none;
-  padding: 18px;
+  padding: 8px 18px;
+  margin-top: 15px;
+  color: white;
   font-family: "Rubik", sans-serif;
   cursor: pointer;
   border-radius: 2px;
@@ -235,6 +236,8 @@ h1 {
 .car-table-card > img,
 .car-card > img {
   height: 90px;
+  width: 90px;
+  border-radius: 50%;
 }
 
 .car-table-card > button {
