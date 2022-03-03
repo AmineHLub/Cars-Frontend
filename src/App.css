@@ -36,8 +36,7 @@ main {
 }
 
 .splash-container > input {
-  height: 30px;
-  width: 40%;
+  width: 60%;
   padding: 5px 1%;
   font-size: 2rem;
   margin: 20px 0 60px 0;
@@ -100,6 +99,11 @@ main {
   main {
     top: 60px;
     left: 0;
+  }
+
+  .splash-container {
+    height: 70%;
+    width: 90%;
   }
 
   .bg-show-car {

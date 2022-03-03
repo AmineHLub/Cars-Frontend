@@ -32,6 +32,7 @@ body {
   right: 0;
   left: 0;
   bottom: 0;
+  height: 100vh;
   display: grid;
   grid-template-columns: 70% 30%;
   grid-template-rows: 1fr;
@@ -91,7 +92,7 @@ body {
   position: absolute;
   z-index: 3;
   left: 0;
-  bottom: 25px;
+  bottom: 25%;
   width: 65px;
   height: 45px;
   background-color: #94c414;
