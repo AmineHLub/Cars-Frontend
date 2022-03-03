@@ -17,11 +17,11 @@ const Navbar = () => {
       </nav>
       <nav className={`navbar-fixed-container ${navState}`}>
         <IoCloseCircle onClick={() => navbarHandler('close-nav')} />
-        <ul className="navbar-list">
+        <ul className="navbar-list font-semibold">
           <li className="header-container"><h2 className="header-logo">Cars</h2></li>
           <NavLink
             onClick={() => navbarHandler('close-nav')}
-            className="selector-container"
+            className="selector-container pl-3"
             exact="true"
             to="/"
           >
@@ -29,7 +29,7 @@ const Navbar = () => {
           </NavLink>
           <NavLink
             onClick={() => navbarHandler('close-nav')}
-            className="selector-container"
+            className="selector-container pl-3"
             exact="true"
             to="/Reserve"
           >
@@ -37,7 +37,7 @@ const Navbar = () => {
           </NavLink>
           <NavLink
             onClick={() => navbarHandler('close-nav')}
-            className="selector-container"
+            className="selector-container pl-3"
             exact="true"
             to="/MyReservations"
           >
@@ -45,7 +45,7 @@ const Navbar = () => {
           </NavLink>
           <NavLink
             onClick={() => navbarHandler('close-nav')}
-            className="selector-container"
+            className="selector-container pl-3"
             exact="true"
             to="/AddCar"
           >
@@ -53,7 +53,7 @@ const Navbar = () => {
           </NavLink>
           <NavLink
             onClick={() => navbarHandler('close-nav')}
-            className="selector-container"
+            className="selector-container pl-3"
             exact="true"
             to="/DeleteCar"
           >

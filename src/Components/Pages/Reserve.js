@@ -34,14 +34,14 @@ const Reserve = ({ pendingReservations, setPending }) => {
     <div className="absolute h-screen bg-primaryGreen w-full">
       <div className="bg-show-car opacity-20" />
       <div className="text-white opacity" />
-      <div className="absolute top-0 h-screen w-full flex items-center justify-center">
-        <div className="py-4 px-4 flex flex-col items-center justify-center">
+      <div className="absolute top-0 h-screen w-full">
+        <div className="py-4 px-4 flex flex-col items-center justify-center md:mx-36">
           <div className="text-center p-4 w-full md:w-2/3">
             <h3 className="text-white text-lg md:text-2xl md:mb-10 font-bold">
               RESERVE A CAR
             </h3>
             <p className="text-white mt-5 md:text-xl">
-              Please fill in the form with with correct details in order to made a reservation. Don&apos;t forget to select a car and your reservation pick up and drop off dates.
+              Please fill in the form with with correct details in order to made a reservation.
             </p>
           </div>
           <form
