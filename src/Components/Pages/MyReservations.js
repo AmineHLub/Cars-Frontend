@@ -8,7 +8,8 @@ const MyReservations = () => {
   useEffect(() => {
     dispatch(fetchReservations());
   }, []);
-  const reservationState = useSelector((state) => state.reservationReducer);
+  const userState = useSelector((state) => state.userReducer);
+  const reservationState = useSelector((state) => state.reservationReducer).filter((filtered) => filtered.user_id === userState.id);
 
   return (
     <div className="absolute h-screen bg-primaryGreen w-full">
