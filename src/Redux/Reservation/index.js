@@ -2,24 +2,10 @@ import Axios from 'axios';
 import baseUrl from '../State/baseUrl';
 
 const GET_RESERVATIONS = 'reservation/GET_RESERVATIONS';
-const CREATE_RESERVATION = 'reservation/CREATE_RESERVATION';
+const UPDATE_RESERVATIONS = 'reservation/UPDATE_RESERVATIONS';
 
 // initial state
-const initialState = {
-  reservations: [],
-};
-
-// Actions
-export const createReservationAction = (json) => async (dispatch) => {
-  const response = await Axios.post(`${baseUrl}/reservations`, json);
-
-  if (response.data.status === 200) {
-    dispatch({
-      type: CREATE_RESERVATION,
-      json,
-    });
-  }
-};
+const initialState = [];
 
 // get resrevations
 export const fetchReservations = () => async (dispatch) => {
@@ -32,12 +18,21 @@ export const fetchReservations = () => async (dispatch) => {
   });
 };
 
+export const handleDeleteReservation = (data) => async (dispatch) => {
+  await Axios.delete(`${baseUrl}/reservations/${data.id}`);
+
+  dispatch({
+    type: UPDATE_RESERVATIONS,
+    payload: data,
+  });
+};
+
 const reservationReducer = (state = initialState, action) => {
   switch (action.type) {
-    case CREATE_RESERVATION:
-      return { reservations: action.json };
     case GET_RESERVATIONS:
-      return { reservations: action.payload };
+      return action.payload;
+    case UPDATE_RESERVATIONS:
+      return state.filter((element) => element.id !== action.payload.id);
     default:
       return state;
   }

@@ -1,25 +1,14 @@
 import { useEffect } from 'react';
-import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchReservations } from '../../Redux/Reservation';
-import baseUrl from '../../Redux/State/baseUrl';
+import { fetchReservations, handleDeleteReservation } from '../../Redux/Reservation';
 
 const MyReservations = () => {
-  const reservationState = useSelector((state) => state.reservationReducer.reservations);
-  const navigate = useNavigate();
   const dispatch = useDispatch();
-
-  const handleDeleteReservation = async (id) => {
-    await axios.delete(`${baseUrl}/reservations/${id}`);
-    navigate('/MyReservations', { replace: true });
-  };
-
-  console.log(reservationState);
 
   useEffect(() => {
     dispatch(fetchReservations());
   }, []);
+  const reservationState = useSelector((state) => state.reservationReducer);
 
   return (
     <div className="absolute h-screen bg-primaryGreen w-full">
@@ -49,25 +38,19 @@ const MyReservations = () => {
                     </tr>
                   </thead>
                   <tbody>
-                    { reservationState.length !== 0
-                      ? reservationState.map((data) => (
-                        <tr key={data?.id} className="flex item-center space-x-5 w-full p-2 text-center">
-                          <td>{data?.car_name}</td>
-                          <td>{data?.start_date}</td>
-                          <td>{data?.end_date}</td>
-                          <td>{data?.duration}</td>
-                          <td className="text-sm w-1/4">
-                            <button type="button" onClick={handleDeleteReservation(data?.id)} className="bg-red-500 p-2 rounded-md text-white hover:bg-red-600">
-                              Delete
-                            </button>
-                          </td>
-                        </tr>
-                      ))
-                      : (
-                        <tr className="flex item-center space-x-5 w-full p-2 text-center">
-                          <td className="w-full" colSpan="3">No reservation available</td>
-                        </tr>
-                      )}
+                    { reservationState && reservationState.map((data) => (
+                      <tr key={data?.id} className="flex item-center space-x-5 w-full p-2 text-center">
+                        <td>{data?.car_name}</td>
+                        <td>{data?.start_date}</td>
+                        <td>{data?.end_date}</td>
+                        <td>{data?.duration}</td>
+                        <td className="text-sm w-1/4">
+                          <button type="button" onClick={() => dispatch(handleDeleteReservation(data))} className="bg-red-500 p-2 rounded-md text-white hover:bg-red-600">
+                            Delete
+                          </button>
+                        </td>
+                      </tr>
+                    ))}
                   </tbody>
                 </table>
               </div>
