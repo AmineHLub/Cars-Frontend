@@ -43,8 +43,8 @@ const DeleteCar = () => {
                   tabIndex="0"
                   className="bg-white flex border border-gray-300 p-2 rounded shadow-md hover:shadow-2xl my-3"
                 >
-                  <div className="w-2/5 h-28 flex items-center justify-center">
-                    <img src={car.image} alt="car-logo" className="object-fit h-full w-full" />
+                  <div className="w-2/5 h-32 flex items-center justify-center p-2">
+                    <img src={car.image} alt="car-logo" className="object-fit h-full w-full rounded-full" />
                   </div>
                   <div className="w-2/5 flex items-center p-2 overflow-hidden">
                     <h2 className="break-all font-bold md:text-2xl">
