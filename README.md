@@ -14,13 +14,13 @@ This app is meant for us to book a car, add a car, reserve a car, and delete a c
 
 ## Backend
 
-[API Documentation](https://name.herokuapp.com/)
+[API Documentation](https://blooming-meadow-49781.herokuapp.com/api-docs/index.html)
 
 [GitHub Repo](https://github.com/mmsesay/final-capstone-backend)
 
 ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](https://622110fecccae53070225c23--cars-microverse-cap.netlify.app/)
 
 ## Built With
 
@@ -35,7 +35,6 @@ To get a local copy up and running follow these simple example steps.
 ### Prerequisites
 
 - NodeJS - [v16.x](https://nodejs.org/en/)
-- Yarn - [1.22.15](https://yarnpkg.com/)
 
 ### Setup
 
@@ -47,13 +46,13 @@ cd ./Cars-frontend
 ### Install
 
 ```bash
-yarn
+npm i
 ```
 
 ### Usage
 
 ```bash
-yarn start
+npm start
 ```
 
 ## Authors
