@@ -41,7 +41,7 @@ const Reserve = ({ pendingReservations, setPending }) => {
               RESERVE A CAR
             </h3>
             <p className="text-white mt-5 md:text-xl">
-              Please fill in the form with with correct details in order to made a reservation. Don&apos;t forget to select a car and your reservation pick up and drop off dates.
+              Please fill in the form with with correct details in order to made a reservation.
             </p>
           </div>
           <form
