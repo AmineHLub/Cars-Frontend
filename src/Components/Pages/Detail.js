@@ -6,7 +6,8 @@ const Detail = ({
   selectedCar, setSelectedCar, setPending, pendingReservations,
 }) => {
   const handlePending = (car) => {
-    if (pendingReservations.includes(car)) {
+    const existingPending = pendingReservations.filter((ep) => ep.id === car.id);
+    if (existingPending.length > 0) {
       alert('you have this car already added to the pending list');
       return null;
     }
