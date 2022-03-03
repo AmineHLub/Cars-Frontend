@@ -24,8 +24,8 @@ const MyReservations = () => {
               You can manage your cars here.
             </p>
           </div>
-          <div className="p-1 border overflow-hidden border-white rounded-md mx-4 md:w-1/2 md:mt-10">
-            <div className="overflow-x-auto">
+          <div className="p-1 border overflow-hidden border-white rounded-md mx-4 md:mt-10">
+            <div>
               <div className="shadow-md bg-white">
                 <table className="w-auto flex flex-col">
                   <thead>

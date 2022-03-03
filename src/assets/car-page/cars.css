@@ -165,14 +165,12 @@ body {
   width: 100%;
 }
 
-.input {
-  font-size: 16px;
-  display: block;
-  font-family: "Rubik", sans-serif;
-  width: 35%;
-  padding: 10px 1px;
-  border: 0;
+#add-car-form > div:not(:nth-child(6)) > input {
+  padding: 10px 2%;
   border-bottom: 1px solid #747474;
+}
+
+#add-car-form > div:not(:nth-child(6)) > input:focus {
   outline: none;
 }
 
@@ -202,7 +200,9 @@ h1 {
 .add-b {
   width: 30%;
   border: none;
-  padding: 18px;
+  padding: 8px 18px;
+  margin-top: 15px;
+  color: white;
   font-family: "Rubik", sans-serif;
   cursor: pointer;
   border-radius: 2px;
@@ -236,6 +236,8 @@ h1 {
 .car-table-card > img,
 .car-card > img {
   height: 90px;
+  width: 90px;
+  border-radius: 50%;
 }
 
 .car-table-card > button {
