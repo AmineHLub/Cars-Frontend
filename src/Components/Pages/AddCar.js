@@ -25,7 +25,7 @@ const AddCar = () => {
       <div className="text-white opacity" />
       <div className="absolute top-0 h-screen w-full flex items-start justify-center">
         <div className="py-4 px-4 flex flex-col items-start justify-center">
-          <div className="text-center p-4 w-full md:w-2/3">
+          <div className="text-center p-4 w-full">
             <h1 className="text-white text-lg md:text-2xl md:mb-10 font-bold">
               ADD A CAR
             </h1>
@@ -33,7 +33,7 @@ const AddCar = () => {
               Please fill in the form with with correct details in order to add a new car.
             </p>
           </div>
-          <div className="mx-5 p-2 md:w-1/2 md:mt-10">
+          <div className="mx-auto p-2 md:mt-10 md:w-full">
             <form
               onSubmit={handleSubmit(submitData)}
               className="bg-white border border-white rounded-md"
