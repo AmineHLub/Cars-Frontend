@@ -6,7 +6,7 @@ import { fetchReservations } from '../../Redux/Reservation';
 import baseUrl from '../../Redux/State/baseUrl';
 
 const MyReservations = () => {
-  const reservationState = useSelector((state) => state.reservationReducer.reservations);
+  const reservationState = useSelector((state) => state.reservationReducer);
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
@@ -56,7 +56,7 @@ const MyReservations = () => {
                         <td>{data?.end_date}</td>
                         <td>{data?.duration}</td>
                         <td className="text-sm w-1/4">
-                          <button type="button" onClick={handleDeleteReservation(data?.id)} className="bg-red-500 p-2 rounded-md text-white hover:bg-red-600">
+                          <button type="button" onClick={() => handleDeleteReservation(data?.id)} className="bg-red-500 p-2 rounded-md text-white hover:bg-red-600">
                             Delete
                           </button>
                         </td>
