@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/control-has-associated-label */
 import { MdArrowBack } from 'react-icons/md';
 import { GrAddCircle } from 'react-icons/gr';
 
@@ -9,9 +8,10 @@ const Detail = ({
     const existingPending = pendingReservations.filter((ep) => ep.id === car.id);
     if (existingPending.length > 0) {
       alert('you have this car already added to the pending list');
-      return null;
+    } else {
+      setPending([...pendingReservations, car]);
+      setSelectedCar('');
     }
-    return setPending([...pendingReservations, car]);
   };
   return (
     <div className="detail-page-container">

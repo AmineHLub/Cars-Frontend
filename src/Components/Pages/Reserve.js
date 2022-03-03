@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
+import { useNavigate } from 'react-router-dom';
 import Select from 'react-select';
 import { useDispatch, useSelector } from 'react-redux';
 import { createReservationAction } from '../../Redux/Reservation';
@@ -7,10 +8,10 @@ import { createReservationAction } from '../../Redux/Reservation';
 import carIcon from '../../assets/images/car-icon.svg';
 import pendingIcon from '../../assets/images/pending-icon.svg';
 
-const Reserve = ({ pendingReservations }) => {
-  console.log(pendingReservations);
+const Reserve = ({ pendingReservations, setPending }) => {
   const userState = useSelector((state) => state.userReducer);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const { register, handleSubmit } = useForm();
   const [selectedCar, setSelectedCar] = useState(null);
 
@@ -21,15 +22,13 @@ const Reserve = ({ pendingReservations }) => {
       duration: data.duration,
     };
 
-    // dispatch the data to the create action
     dispatch(createReservationAction(reserveData));
-    // pendingReservations = [];
+    const newPendingReservations = pendingReservations.filter((element) => element.id !== reserveData.car_id);
+    setPending(newPendingReservations);
+    navigate('/MyReservations', { replace: true });
   };
 
-  // will hold the options for the car selection tag
   const options = [];
-
-  // loop through the cars and push the object to the options arrays
   pendingReservations.map((car) => options.push({ value: car.id, label: car.name }));
 
   return (

@@ -22,7 +22,7 @@ function App() {
           <main>
             <Routes>
               <Route path="/" element={<Car pendingReservations={pendingReservations} setPending={setPending} />} />
-              <Route path="/Reserve" element={<Reserve pendingReservations={pendingReservations} />} />
+              <Route path="/Reserve" element={<Reserve pendingReservations={pendingReservations} setPending={setPending} />} />
               <Route path="/MyReservations" element={<MyReservations />} />
               <Route path="/AddCar" element={<AddCar />} />
               <Route path="/DeleteCar" element={<DeleteCar />} />
