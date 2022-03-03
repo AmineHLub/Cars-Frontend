@@ -13,7 +13,8 @@ import calendarIcon from '../../assets/images/calendar-icon.svg';
 // will hold the options for the car selection tag
 const options = [];
 
-const Reserve = () => {
+const Reserve = ({ pendingReservations }) => {
+  console.log(pendingReservations);
   // const reservationState = useSelector((state) => state.reservationReducer.reservations);
   const userState = useSelector((state) => state.userReducer);
   const carState = useSelector((state) => state.carReducer);

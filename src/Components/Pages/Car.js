@@ -4,7 +4,7 @@ import { fetchCars } from '../../Redux/State/Car';
 import '../../assets/car-page/cars.css';
 import Detail from './Detail';
 
-const Car = () => {
+const Car = ({ setPending, pendingReservations }) => {
   const [selectedCar, setSelectedCar] = useState('');
 
   const carObj = useSelector((state) => state.carReducer);
@@ -22,7 +22,7 @@ const Car = () => {
             <p>{car.description}</p>
           </div>
         ))
-        : <Detail selectedCar={selectedCar} setSelectedCar={setSelectedCar} />}
+        : <Detail selectedCar={selectedCar} setSelectedCar={setSelectedCar} setPending={setPending} pendingReservations={pendingReservations} />}
     </div>
   );
 };
