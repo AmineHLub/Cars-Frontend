@@ -236,6 +236,8 @@ h1 {
 .car-table-card > img,
 .car-card > img {
   height: 90px;
+  width: 90px;
+  border-radius: 50%;
 }
 
 .car-table-card > button {

@@ -4,10 +4,8 @@ import baseUrl from '../State/baseUrl';
 const GET_RESERVATIONS = 'reservation/GET_RESERVATIONS';
 const UPDATE_RESERVATIONS = 'reservation/UPDATE_RESERVATIONS';
 
-// initial state
 const initialState = [];
 
-// get resrevations
 export const fetchReservations = () => async (dispatch) => {
   const response = await Axios.get(`${baseUrl}/reservations`);
   const fetchedData = response.data;

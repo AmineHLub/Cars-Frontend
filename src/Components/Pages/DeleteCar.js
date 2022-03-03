@@ -22,7 +22,7 @@ const DeleteCar = () => {
   return (
     <div className="delete-cars-container">
       {carsList.map((car) => (
-        <div key={car.id} role="button" tabIndex="0" className="car-table-card">
+        <div key={car.id} className="car-table-card">
           <img src={car.image} alt="car-logo" />
           <h2>{car.name}</h2>
           <button type="button" onClick={() => handleDelete(car.id)}>Delete</button>
