@@ -5,7 +5,6 @@ import { fetchReservations } from '../../Redux/Reservation';
 const MyReservations = () => {
   const reservationState = useSelector((state) => state.reservationReducer.reservations);
   // const userState = useSelector((state) => state.userReducer);
-  // const carState = useSelector((state) => state.carReducer);
   const dispatch = useDispatch();
 
   // const onSubmit = (data) => {
@@ -23,7 +22,7 @@ const MyReservations = () => {
   console.log(reservationState);
 
   useEffect(() => {
-    dispatch(fetchReservations);
+    dispatch(fetchReservations());
   }, []);
 
   return (
@@ -54,22 +53,19 @@ const MyReservations = () => {
                     </tr>
                   </thead>
                   <tbody>
-                    { reservationState && (
-                    <tr key={reservationState?.id} className="flex item-center space-x-5 w-full p-2 text-center">
-                      {/* <td>{reservationState?.car_id}</td> */}
-                      {/* <td>{reservationState?.start_date?.toString().slice(4, 16)}</td> */}
-                      {/* <td>{reservationState?.duration}</td> */}
-                      <td className="text-sm w-1/4">Name</td>
-                      <td className="text-sm w-1/4">Name</td>
-                      <td className="text-sm w-1/4">Name</td>
-                      <td className="text-sm w-1/4">Name</td>
-                      <td className="text-sm w-1/4">
-                        <button type="button" className="bg-red-500 p-2 rounded-md text-white hover:bg-red-600">
-                          Delete
-                        </button>
-                      </td>
-                    </tr>
-                    )}
+                    { reservationState && reservationState.map((data) => (
+                      <tr key={data?.id} className="flex item-center space-x-5 w-full p-2 text-center">
+                        <td>{data?.car_name}</td>
+                        <td>{data?.start_date}</td>
+                        <td>{data?.end_date}</td>
+                        <td>{data?.duration}</td>
+                        <td className="text-sm w-1/4">
+                          <button type="button" className="bg-red-500 p-2 rounded-md text-white hover:bg-red-600">
+                            Delete
+                          </button>
+                        </td>
+                      </tr>
+                    ))}
                   </tbody>
                 </table>
               </div>

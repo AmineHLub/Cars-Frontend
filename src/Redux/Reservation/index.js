@@ -37,7 +37,7 @@ const reservationReducer = (state = initialState, action) => {
     case CREATE_RESERVATION:
       return { reservations: action.json };
     case GET_RESERVATIONS:
-      return action.payload;
+      return { reservations: action.payload };
     default:
       return state;
   }
