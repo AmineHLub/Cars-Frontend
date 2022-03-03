@@ -38,19 +38,24 @@ const MyReservations = () => {
                     </tr>
                   </thead>
                   <tbody>
-                    { reservationState && reservationState.map((data) => (
-                      <tr key={data?.id} className="flex item-center space-x-5 w-full p-2 text-center">
-                        <td>{data?.car_name}</td>
-                        <td>{data?.start_date}</td>
-                        <td>{data?.end_date}</td>
-                        <td>{data?.duration}</td>
-                        <td className="text-sm w-1/4">
-                          <button type="button" onClick={() => dispatch(handleDeleteReservation(data))} className="bg-red-500 p-2 rounded-md text-white hover:bg-red-600">
-                            Delete
-                          </button>
-                        </td>
-                      </tr>
-                    ))}
+                    { reservationState.length !== 0
+                      ? reservationState && reservationState.map((data) => (
+                        <tr key={data?.id} className="flex item-center space-x-5 w-full p-2 text-center">
+                          <td>{data?.car_name}</td>
+                          <td>{data?.start_date}</td>
+                          <td>{data?.end_date}</td>
+                          <td>{data?.duration}</td>
+                          <td className="text-sm w-1/4">
+                            <button type="button" onClick={() => dispatch(handleDeleteReservation(data))} className="bg-red-500 p-2 rounded-md text-white hover:bg-red-600">
+                              Cancel
+                            </button>
+                          </td>
+                        </tr>
+                      )) : (
+                        <tr className="flex item-center space-x-5 w-full p-2 text-center">
+                          <td className="w-full text-center" colSpan={3}>No reservation available</td>
+                        </tr>
+                      )}
                   </tbody>
                 </table>
               </div>
