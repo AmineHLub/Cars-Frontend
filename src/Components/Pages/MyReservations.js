@@ -1,23 +1,19 @@
 import { useEffect } from 'react';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchReservations } from '../../Redux/Reservation';
+import baseUrl from '../../Redux/State/baseUrl';
 
 const MyReservations = () => {
   const reservationState = useSelector((state) => state.reservationReducer.reservations);
-  // const userState = useSelector((state) => state.userReducer);
+  const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  // const onSubmit = (data) => {
-  //   const reserveData = {
-  //     car_id: selectedCar,
-  //     user_id: userState.id,
-  //     start_date: selectedDate,
-  //     duration: data.duration,
-  //   };
-
-  //   // dispatch the data to the create action
-  //   dispatch(createReservationAction(reserveData));
-  // };
+  const handleDeleteReservation = async (id) => {
+    await axios.delete(`${baseUrl}/reservations/${id}`);
+    navigate('/MyReservations', { replace: true });
+  };
 
   console.log(reservationState);
 
@@ -60,7 +56,7 @@ const MyReservations = () => {
                         <td>{data?.end_date}</td>
                         <td>{data?.duration}</td>
                         <td className="text-sm w-1/4">
-                          <button type="button" className="bg-red-500 p-2 rounded-md text-white hover:bg-red-600">
+                          <button type="button" onClick={handleDeleteReservation(data?.id)} className="bg-red-500 p-2 rounded-md text-white hover:bg-red-600">
                             Delete
                           </button>
                         </td>
