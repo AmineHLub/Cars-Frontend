@@ -1,59 +1,84 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
+# Final group capstone - Car reservation Frontend
+
+![Microverse](https://img.shields.io/badge/Microverse-blueviolet)
 
 # Project Name
 
-> One paragraph statement about the project.
+- [Kanban board](https://github.com/mmsesay/final-capstone-backend/projects/1#card-77937550)
+
+> Frontend Car booking app.
 
 ![screenshot](./app_screenshot.png)
 
-Additional description about the project and its features.
+This app is meant for us to book a car, add a car, reserve a car, and delete a car.
 
-## Built With
+## Backend
 
-- Major languages
-- Frameworks
-- Technologies used
+[API Documentation](https://blooming-meadow-49781.herokuapp.com/api-docs/index.html)
+
+[GitHub Repo](https://github.com/mmsesay/final-capstone-backend)
 
 ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](https://622110fecccae53070225c23--cars-microverse-cap.netlify.app/)
 
+## Built With
+
+- React
+- Redux
+- React Router
 
 ## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
 
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
+- NodeJS - [v16.x](https://nodejs.org/en/)
+
 ### Setup
+
+```bash
+git clone git@github.com:AmineHLub/Cars-Frontend.git
+cd ./Cars-frontend
+```
 
 ### Install
 
+```bash
+npm i
+```
+
 ### Usage
 
-### Run tests
-
-### Deployment
-
-
+```bash
+npm start
+```
 
 ## Authors
 
-👤 **Author1**
+👤 **Mohamed Amine**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@AmineHLub](https://github.com/AmineHLub)
+- Twitter: [@Amino47612441](https://twitter.com/Amino47612441)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/mohamed-amine-hajltaief-b18863163/)
 
-👤 **Author2**
+👤 **Muhammad Sesay**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@mmsesay](https://github.com/mmsesay)
+- Twitter: [@DeeMaejor](https://twitter.com/DeeMaejor)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/muhammad-m-sesay)
+
+👤 **Sheyla Pozo** 
+
+- Github:[Sheyla Pozo](https://github.com/sheylaPozo)
+- Linkedin: [Sheyla Pozo](https://www.linkedin.com/in/sheypozo/)
+- Twitter: [Sheyla Pozo](https://twitter.com/sheyPozo)
+
+👤 **Makungong Collins Tatang**
+- GitHub: [@CollinsTatang1](https://github.com/CollinsTatang)
+- Twitter: [@CollinsTatang1](https://twitter.com/CollinsTatang1)
+- LinkedIn: [Makungong Collins](https://www.linkedin.com/in/makungong-collins/)
 
 ## 🤝 Contributing
 
@@ -67,9 +92,8 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- Microverse
+- Original design by [Murat Korkmaz](https://www.behance.net/muratk) on Behance
 
 ## 📝 License
 

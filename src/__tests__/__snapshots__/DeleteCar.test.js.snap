@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing Delete car component renders as expected 1`] = `
+<div
+  className="absolute h-screen bg-primaryGreen w-full"
+>
+  <div
+    className="bg-show-car opacity-20"
+  />
+  <div
+    className="text-white opacity"
+  />
+  <div
+    className="absolute top-0 h-screen w-full flex items-start justify-center"
+  >
+    <div
+      className="py-4 px-4 flex flex-col items-start justify-center"
+    >
+      <div
+        className="text-center p-4 w-full"
+      >
+        <h1
+          className="text-white text-lg md:text-2xl md:mb-10 font-bold"
+          data-testid="h1"
+        >
+          DELETE A CAR
+        </h1>
+        <p
+          className="text-white mt-5 md:text-xl"
+          data-testid="p"
+        >
+          Click on the delele button to perform the delele operation.
+        </p>
+      </div>
+      <div
+        className="mx-auto p-2 md:mt-10 w-full md:w-full"
+        data-testid="cars-container"
+      >
+        <div
+          className="border border-white rounded-md p-2"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

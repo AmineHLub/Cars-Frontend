@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+.navbar-fixed-container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 17.5%;
+  background-color: rgb(246 246 246);
+}
+
+.navbar-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 25% repeat(5, 6%) 1fr;
+  list-style-type: none;
+  flex-direction: column;
+  height: 100%;
+  margin: 0 0 0 10%;
+  padding: 0;
+}
+
+.header-logo {
+  transform: rotate(350deg);
+  font-family: 'Pacifico', cursive;
+  font-size: 3.5rem;
+  font-weight: 400;
+  color: rgb(77, 77, 77);
+  text-decoration: underline;
+}
+
+.selector-container {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 2px;
+}
+
+.navbar-list > .active {
+  color: white;
+  background-color: #94c414;
+}
+
+.social-container {
+  place-self: end start;
+  width: 100%;
+  margin: 0 0 0 -10%;
+}
+
+.social-main-container {
+  margin: 0 20% 7px 20%;
+  justify-content: space-evenly;
+}
+
+.social-main-container > svg {
+  cursor: pointer;
+}
+
+.rights-res-desk {
+  text-align: center;
+}
+
+.selector-container:hover {
+  color: white;
+  background-color: #94c414;
+}
+
+.navbar-fixed-container > svg:nth-child(1),
+.burger-menu-nav {
+  display: none;
+}
+
+@media only screen and
+  (min-width: 768px)
+  and (max-width: 1054px) {
+  .navbar-fixed-container {
+    width: 25%;
+  }
+}
+
+@media only screen and
+  (max-width: 768px) {
+  .burger-menu-nav {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 60px;
+  }
+
+  .burger-menu-nav > svg:nth-child(1) {
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    margin-left: 2%;
+  }
+
+  .navbar-fixed-container {
+    width: 70%;
+    left: -70%;
+    z-index: 9;
+  }
+
+  .show-nav {
+    transform: translate(100%);
+    transition: 0.45s;
+  }
+
+  .close-nav {
+    transform: translate(-100%);
+    transition: 0.45s;
+  }
+
+  .navbar-fixed-container > svg:nth-child(1) {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    top: 45px;
+    right: 10px;
+    z-index: 10;
+    height: 40px;
+    width: 40px;
+  }
+}

@@ -1,0 +1,198 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing My Reserve component renders as expected 1`] = `
+<div
+  className="absolute h-screen bg-primaryGreen w-full"
+>
+  <div
+    className="bg-show-car opacity-20"
+  />
+  <div
+    className="text-white opacity"
+  />
+  <div
+    className="absolute top-0 h-screen w-full"
+  >
+    <div
+      className="py-4 px-4 flex flex-col items-center justify-center md:mx-36"
+    >
+      <div
+        className="text-center p-4 w-full md:w-2/3"
+      >
+        <h3
+          className="text-white text-lg md:text-2xl md:mb-10 font-bold"
+          data-testid="h3"
+        >
+          RESERVE A CAR
+        </h3>
+        <p
+          className="text-white mt-5 md:text-xl"
+          data-testid="p"
+        >
+          Please fill in the form with with correct details in order to made a reservation.
+        </p>
+      </div>
+      <form
+        className="bg-white border border-white rounded-md w-2/3 md:w-1/2 md:mt-10"
+        data-testid="form"
+        onSubmit={[Function]}
+      >
+        <div
+          className="border border-gray-300 flex items-center"
+        >
+          <div
+            className="w-10"
+          >
+            <div
+              className="flex left-0 w-10 items-center pl-3 pointer-events-none"
+              data-testid="image"
+            >
+              <img
+                alt="carIcon"
+                className="w-5 h-5 text-gray-500"
+                src="car-icon.svg"
+              />
+            </div>
+          </div>
+          <div
+            className="w-full h-full css-b62m3t-container"
+            onKeyDown={[Function]}
+          >
+            <span
+              className="css-1f43avz-a11yText-A11yText"
+              id="react-select-3-live-region"
+            />
+            <span
+              aria-atomic="false"
+              aria-live="polite"
+              aria-relevant="additions text"
+              className="css-1f43avz-a11yText-A11yText"
+            />
+            <div
+              className=" css-1s2u09g-control"
+              onMouseDown={[Function]}
+              onTouchEnd={[Function]}
+            >
+              <div
+                className=" css-319lph-ValueContainer"
+              >
+                <div
+                  className=" css-14el2xx-placeholder"
+                  id="react-select-3-placeholder"
+                >
+                  Select a car
+                </div>
+                <div
+                  className=" css-6j8wv5-Input"
+                  data-value=""
+                >
+                  <input
+                    aria-autocomplete="list"
+                    aria-controls="react-select-3-listbox"
+                    aria-describedby="react-select-3-placeholder"
+                    aria-expanded={false}
+                    aria-haspopup={true}
+                    aria-owns="react-select-3-listbox"
+                    autoCapitalize="none"
+                    autoComplete="off"
+                    autoCorrect="off"
+                    className=""
+                    disabled={false}
+                    id="react-select-3-input"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                    role="combobox"
+                    spellCheck="false"
+                    style={
+                      Object {
+                        "background": 0,
+                        "border": 0,
+                        "color": "inherit",
+                        "font": "inherit",
+                        "gridArea": "1 / 2",
+                        "label": "input",
+                        "margin": 0,
+                        "minWidth": "2px",
+                        "opacity": 1,
+                        "outline": 0,
+                        "padding": 0,
+                        "width": "100%",
+                      }
+                    }
+                    tabIndex={0}
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </div>
+              <div
+                className=" css-1hb7zxy-IndicatorsContainer"
+              >
+                <span
+                  className=" css-1okebmr-indicatorSeparator"
+                />
+                <div
+                  aria-hidden="true"
+                  className=" css-tlfecz-indicatorContainer"
+                  onMouseDown={[Function]}
+                  onTouchEnd={[Function]}
+                >
+                  <svg
+                    aria-hidden="true"
+                    className="css-tj5bde-Svg"
+                    focusable="false"
+                    height={20}
+                    viewBox="0 0 20 20"
+                    width={20}
+                  >
+                    <path
+                      d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="border border-gray-300 flex items-center"
+        >
+          <div
+            className="w-10"
+          >
+            <div
+              className="flex left-0 w-10 items-center pl-3 pointer-events-none"
+            >
+              <img
+                alt="carIcon"
+                className="w-5 h-5 text-gray-500"
+                src="pending-icon.svg"
+              />
+            </div>
+          </div>
+          <input
+            className="text-gray-800 pl-3 h-12 w-full"
+            data-testid="duration-input"
+            name="duration"
+            onBlur={[Function]}
+            onChange={[Function]}
+            placeholder="Duration"
+            type="text"
+          />
+        </div>
+        <div
+          className="w-full h-auto border border-gray-300 flex items-center justify-center pt-10 pb-5"
+        >
+          <button
+            className="bg-primaryGreen border-2 border-white p-3 rounded-full w-full mx-14 md:w-1/2 text-white font-semibold cursor-pointer"
+            type="submit"
+          >
+            Reserve
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+`;
