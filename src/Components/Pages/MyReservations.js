@@ -18,17 +18,17 @@ const MyReservations = () => {
       <div className="absolute top-0 h-screen w-full">
         <div className="py-4 px-4 flex flex-col items-center justify-center">
           <div className="text-center p-4 w-full md:w-2/3">
-            <h3 className="text-white text-lg md:text-2xl md:mb-10 font-bold">
+            <h3 data-testid="h3" className="text-white text-lg md:text-2xl md:mb-10 font-bold">
               YOUR RESERVED CARS
             </h3>
-            <p className="text-white mt-5 md:text-xl">
+            <p data-testid="p" className="text-white mt-5 md:text-xl">
               You can manage your cars here.
             </p>
           </div>
           <div className="p-1 border overflow-hidden border-white rounded-md mx-4 md:mt-10">
             <div>
               <div className="shadow-md bg-white">
-                <table className="w-auto flex flex-col">
+                <table data-testid="table" className="w-auto flex flex-col">
                   <thead>
                     <tr className="flex space-x-5 w-full h-auto bg-gray-800 p-2 text-gray-200">
                       <th className="text-sm w-1/4">Name</th>

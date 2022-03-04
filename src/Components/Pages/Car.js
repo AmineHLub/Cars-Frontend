@@ -13,7 +13,7 @@ const Car = ({ setPending, pendingReservations }) => {
     dispatch(fetchCars());
   }, []);
   return (
-    <div className="cars-container d-flex h-screen">
+    <div data-testid="cars-container" className="cars-container d-flex h-screen">
       {!selectedCar
         ? carObj.map((car) => (
           <div

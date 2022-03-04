@@ -35,11 +35,13 @@ const AddCar = () => {
           </div>
           <div className="mx-auto p-2 md:mt-10 md:w-full">
             <form
+              data-testid="form"
               onSubmit={handleSubmit(submitData)}
               className="bg-white border border-white rounded-md"
             >
               <div className="border border-gray-300 flex items-center">
                 <input
+                  data-testid="name"
                   type="text"
                   placeholder="Name"
                   className="text-gray-800 pl-3 h-12 w-full"
@@ -50,6 +52,7 @@ const AddCar = () => {
               </div>
               <div className="border border-gray-300 flex items-center">
                 <input
+                  data-testid="description"
                   type="textarea"
                   placeholder="Description"
                   className="text-gray-800 pl-3 h-12 w-full"
@@ -60,6 +63,7 @@ const AddCar = () => {
               </div>
               <div className="border border-gray-300 flex items-center">
                 <input
+                  data-testid="model-info"
                   type="text"
                   placeholder="Model info"
                   className="text-gray-800 pl-3 h-12 w-full"
@@ -70,6 +74,7 @@ const AddCar = () => {
               </div>
               <div className="border border-gray-300 flex items-center">
                 <input
+                  data-testid="reservation-fee"
                   type="number"
                   placeholder="Reservation Fee"
                   className="text-gray-800 pl-3 h-12 w-full"
@@ -81,6 +86,7 @@ const AddCar = () => {
               </div>
               <div className="border border-gray-300 flex items-center p-3">
                 <input
+                  data-testid="image"
                   type="file"
                   placeholder="Choose File"
                   className="text-gray-800 w-full"

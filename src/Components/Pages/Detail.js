@@ -15,15 +15,15 @@ const Detail = ({
   };
   return (
     <div className="detail-page-container">
-      <div className="selected-car-img-container">
+      <div data-testid="selected-car-img-container" className="selected-car-img-container">
         <img src={selectedCar.image} alt="selected-car" />
       </div>
       <div className="selected-car-info-container d-flex">
-        <div className="header-car-info">
+        <div data-testid="header-car-info" className="header-car-info">
           <h2>{selectedCar.name}</h2>
           <p>{selectedCar.description}</p>
         </div>
-        <div className="all-fees-container">
+        <div data-testid="all-fees-container" className="all-fees-container">
           <div className="fees-container d-flex">
             <p>
               One day reservation:
@@ -46,6 +46,7 @@ const Detail = ({
           </div>
         </div>
         <button
+          data-testid="reservation-button"
           type="button"
           className="add-reservation-btn d-flex"
           onClick={() => handlePending(selectedCar)}

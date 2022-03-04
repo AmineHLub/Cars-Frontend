@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing Car component renders as expected 1`] = `
+<div
+  className="cars-container d-flex h-screen"
+  data-testid="cars-container"
+/>
+`;

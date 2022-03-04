@@ -27,14 +27,14 @@ const DeleteCar = () => {
       <div className="absolute top-0 h-screen w-full flex items-start justify-center">
         <div className="py-4 px-4 flex flex-col items-start justify-center">
           <div className="text-center p-4 w-full">
-            <h1 className="text-white text-lg md:text-2xl md:mb-10 font-bold">
+            <h1 data-testid="h1" className="text-white text-lg md:text-2xl md:mb-10 font-bold">
               DELETE A CAR
             </h1>
-            <p className="text-white mt-5 md:text-xl">
+            <p data-testid="p" className="text-white mt-5 md:text-xl">
               Click on the delele button to perform the delele operation.
             </p>
           </div>
-          <div className="mx-auto p-2 md:mt-10 w-full md:w-full">
+          <div data-testid="cars-container" className="mx-auto p-2 md:mt-10 w-full md:w-full">
             <div className="border border-white rounded-md p-2">
               {carsList.map((car) => (
                 <div

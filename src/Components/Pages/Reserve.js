@@ -37,24 +37,26 @@ const Reserve = ({ pendingReservations, setPending }) => {
       <div className="absolute top-0 h-screen w-full">
         <div className="py-4 px-4 flex flex-col items-center justify-center md:mx-36">
           <div className="text-center p-4 w-full md:w-2/3">
-            <h3 className="text-white text-lg md:text-2xl md:mb-10 font-bold">
+            <h3 data-testid="h3" className="text-white text-lg md:text-2xl md:mb-10 font-bold">
               RESERVE A CAR
             </h3>
-            <p className="text-white mt-5 md:text-xl">
+            <p data-testid="p" className="text-white mt-5 md:text-xl">
               Please fill in the form with with correct details in order to made a reservation.
             </p>
           </div>
           <form
+            data-testid="form"
             onSubmit={handleSubmit(onSubmit)}
             className="bg-white border border-white rounded-md w-2/3 md:w-1/2 md:mt-10"
           >
             <div className="border border-gray-300 flex items-center">
               <div className="w-10">
-                <div className="flex left-0 w-10 items-center pl-3 pointer-events-none">
+                <div data-testid="image" className="flex left-0 w-10 items-center pl-3 pointer-events-none">
                   <img src={carIcon} alt="carIcon" className="w-5 h-5 text-gray-500" />
                 </div>
               </div>
               <Select
+                data-testid="select-input"
                 onChange={(selected) => setSelectedCar(selected.value)}
                 options={options}
                 placeholder="Select a car"
@@ -68,6 +70,7 @@ const Reserve = ({ pendingReservations, setPending }) => {
                 </div>
               </div>
               <input
+                data-testid="duration-input"
                 type="text"
                 placeholder="Duration"
                 className="text-gray-800 pl-3 h-12 w-full"
