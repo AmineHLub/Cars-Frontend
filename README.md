@@ -76,9 +76,9 @@ npm start
 - Twitter: [Sheyla Pozo](https://twitter.com/sheyPozo)
 
 👤 **Makungong Collins Tatang**
-- GitHub: [@CollinsTatang1](https://github.com/CollinsTatang)
+- GitHub: [@CollinsTatang](https://github.com/CollinsTatang)
 - Twitter: [@CollinsTatang1](https://twitter.com/CollinsTatang1)
-- LinkedIn: [Makungong Collins](https://www.linkedin.com/in/makungong-collins/)
+- LinkedIn: [Makungang Collins Tatang](https://www.linkedin.com/in/makungang-collins/)
 
 ## 🤝 Contributing
 
